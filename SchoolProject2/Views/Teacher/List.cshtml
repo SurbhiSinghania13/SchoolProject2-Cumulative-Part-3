@@ -1,0 +1,18 @@
+﻿﻿@model IEnumerable<SchoolProject2.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<div>
+    <nav>
+        <a href="/Teacher/New">New Teacher</a>
+    </nav>
+    <h2>List of Teachers</h2>
+    @foreach (var teacher in Model)
+    {
+        <div>
+            <div><a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFname @teacher.TeacherLname</a></div>
+        </div>
+    }
+</div>
+
